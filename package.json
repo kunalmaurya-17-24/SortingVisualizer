@@ -1,13 +1,30 @@
 {
-  "name": "sorting",
-  "private": true,
-  "version": "0.0.0",
+  "name": "sorting-visualizer",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
+  "description": "Interactive Sorting Algorithm Visualizer",
+  "author": "Kunal Maurya",
+  "license": "MIT",
+  "homepage": "https://github.com/kunalmaurya-17-24/SortingVisualizer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kunalmaurya-17-24/SortingVisualizer.git"
+  },
+  "keywords": [
+    "sorting",
+    "algorithm",
+    "visualization",
+    "react"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -18,11 +35,18 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^1.3.1",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
-    "vite": "^5.4.1"
+    "husky": "^9.0.11",
+    "vite": "^5.4.1",
+    "vitest": "^1.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
